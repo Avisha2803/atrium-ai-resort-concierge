@@ -8,7 +8,7 @@ Run with:  streamlit run dashboard.py
 """
 
 import json
-
+import requests
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -16,6 +16,7 @@ from streamlit_autorefresh import st_autorefresh
 
 from backend.database import Base, SessionLocal, engine
 from backend.models import FoodOrder, RoomServiceRequest
+API_URL = "https://atrium-ai-resort-concierge.onrender.com"
 
 st.set_page_config(
     page_title="Resort Operations Dashboard", page_icon="📋", layout="wide"
@@ -37,75 +38,28 @@ STATUS_COLORS = {
 # --------------------------------------------------------------------------
 # Data access
 # --------------------------------------------------------------------------
-def load_orders() -> pd.DataFrame:
-    db = SessionLocal()
-    try:
-        orders = db.query(FoodOrder).order_by(FoodOrder.id.desc()).all()
-        rows = []
-        for o in orders:
-            items = json.loads(o.items)
-            items_str = ", ".join(f"{i['quantity']}x {i['name']}" for i in items)
-            rows.append(
-                {
-                    "Order ID": o.id,
-                    "Room": o.room_number,
-                    "Items": items_str,
-                    "Amount (₹)": o.total_amount,
-                    "Status": o.status,
-                    "Created At": o.created_at.strftime("%Y-%m-%d %H:%M:%S"),
-                }
-            )
-        return pd.DataFrame(rows)
-    finally:
-        db.close()
+def load_orders():
+    response = requests.get(f"{API_URL}/api/dashboard/orders")
+    return pd.DataFrame(response.json())
 
 
-def load_requests() -> pd.DataFrame:
-    db = SessionLocal()
-    try:
-        reqs = db.query(RoomServiceRequest).order_by(RoomServiceRequest.id.desc()).all()
-        rows = []
-        for r in reqs:
-            rows.append(
-                {
-                    "Request ID": r.id,
-                    "Room": r.room_number,
-                    "Type": r.request_type,
-                    "Details": r.details or "",
-                    "Status": r.status,
-                    "Created At": r.created_at.strftime("%Y-%m-%d %H:%M:%S"),
-                }
-            )
-        return pd.DataFrame(rows)
-    finally:
-        db.close()
+def load_requests():
+    response = requests.get(f"{API_URL}/api/dashboard/requests")
+    return pd.DataFrame(response.json())
 
 
-def update_order_status(order_id: int, status: str):
-    db = SessionLocal()
-    try:
-        o = db.query(FoodOrder).filter(FoodOrder.id == order_id).first()
-        if o:
-            o.status = status
-            db.commit()
-    finally:
-        db.close()
+def update_order_status(order_id, status):
+    requests.put(
+        f"{API_URL}/api/dashboard/order/{order_id}",
+        params={"status": status},
+    )
 
 
-def update_request_status(request_id: int, status: str):
-    db = SessionLocal()
-    try:
-        r = (
-            db.query(RoomServiceRequest)
-            .filter(RoomServiceRequest.id == request_id)
-            .first()
-        )
-        if r:
-            r.status = status
-            db.commit()
-    finally:
-        db.close()
-
+def update_request_status(request_id, status):
+    requests.put(
+        f"{API_URL}/api/dashboard/request/{request_id}",
+        params={"status": status},
+    )
 
 def apply_filters(
     df: pd.DataFrame, status_filter: str, room_filter: str

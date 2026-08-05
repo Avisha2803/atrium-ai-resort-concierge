@@ -15,6 +15,7 @@ API docs:
 import json
 import traceback
 from contextlib import asynccontextmanager
+from backend.database import SessionLocal
 
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -171,6 +172,44 @@ def list_requests(db: Session = Depends(get_db)):
         }
         for r in requests
     ]
+
+
+@app.put("/api/dashboard/order/{order_id}")
+def update_order(order_id: int, status: str):
+    db = SessionLocal()
+    try:
+        order = db.query(FoodOrder).filter(FoodOrder.id == order_id).first()
+
+        if not order:
+            return {"error": "Order not found"}
+
+        order.status = status
+        db.commit()
+
+        return {"success": True}
+    finally:
+        db.close()
+
+
+@app.put("/api/dashboard/request/{request_id}")
+def update_request(request_id: int, status: str):
+    db = SessionLocal()
+    try:
+        request = (
+            db.query(RoomServiceRequest)
+            .filter(RoomServiceRequest.id == request_id)
+            .first()
+        )
+
+        if not request:
+            return {"error": "Request not found"}
+
+        request.status = status
+        db.commit()
+
+        return {"success": True}
+    finally:
+        db.close()
 
 
 # ---------------------------------------------------------------------
