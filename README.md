@@ -1,5 +1,13 @@
 # 🏝️ Atrium AI Resort Concierge
 
+## 🚀 Live Demo
+
+**Guest Chat:** *(Coming Soon)*
+
+**Operations Dashboard:** *(Coming Soon)*
+
+> The live links will be added after deployment.
+
 <p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
@@ -13,9 +21,23 @@
 
 ---
 
-# 🏨 Overview
+## 📌 Highlights
 
-Atrium AI Resort Concierge is an end-to-end multi-agent hotel assistant that automates guest interactions using **Google Gemini**, **LangGraph**, **FastAPI**, and **SQLite**.
+- 🤖 Multi-Agent AI Concierge
+- 🧠 Conversation Memory
+- 🍽 Multi-turn Food Ordering
+- 🛎 Room Service Automation
+- 🏨 Reception Assistant
+- 📊 Live Analytics Dashboard
+- ⚡ FastAPI + LangGraph + Gemini
+
+---
+
+## 🏨 About the Project
+
+Atrium AI Resort Concierge is a production-style AI-powered hotel assistant that enables guests to interact naturally with resort services through a conversational interface.
+
+The system combines **FastAPI**, **LangGraph**, **Google Gemini**, and **SQLite** to provide intelligent routing, multi-turn conversations, persistent order management, and a live operations dashboard for hotel staff.
 
 Guests can:
 
