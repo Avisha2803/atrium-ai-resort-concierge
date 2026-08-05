@@ -40,6 +40,19 @@ Hotel staff can monitor and manage all guest activities through a dedicated **St
 
 ---
 
+## 🌐 Live Links
+
+- 🚀 Live AI Concierge:
+  https://atrium-ai-resort-concierge.onrender.com
+
+- 📊 Operations Dashboard:
+  https://atrium-ai-resort-concierge-ywafbm5ey3qxraexab8qwj.streamlit.app
+
+- 📄 Interactive API Documentation:
+  https://atrium-ai-resort-concierge.onrender.com/docs
+
+---
+
 ## ✨ Why This Project?
 
 Modern hotels receive hundreds of repetitive guest requests every day, such as:
@@ -569,10 +582,10 @@ http://localhost:8501
 
 # 🌐 Available Services
 
-| Service | URL |
-|----------|-----|
-| Guest Chat | http://localhost:8000 |
-| Dashboard | http://localhost:8501 |
+| Service | Live URL |
+|----------|----------|
+| 🌐 AI Concierge | https://atrium-ai-resort-concierge.onrender.com |
+| 📊 Operations Dashboard | https://atrium-ai-resort-concierge-ywafbm5ey3qxraexab8qwj.streamlit.app |
 
 ---
 
@@ -600,6 +613,8 @@ The resort landing page with the floating AI concierge widget.
 
 ![Landing Page](screenshots/home.png)
 
+🔗 Live Website:
+https://atrium-ai-resort-concierge.onrender.com
 ---
 
 ## 💬 AI Concierge Chat
@@ -632,6 +647,9 @@ Live Streamlit dashboard displaying food orders, room service requests, and oper
 
 ![Dashboard](screenshots/dashboard.png)
 
+🔗 Live Dashboard:
+https://atrium-ai-resort-concierge-ywafbm5ey3qxraexab8qwj.streamlit.app
+
 ---
 
 # 🎥 Demo
@@ -640,11 +658,9 @@ Live Streamlit dashboard displaying food orders, room service requests, and oper
 
 | Service | URL |
 |----------|-----|
-| 🌐 Guest Chat | **Coming Soon** |
-| 📊 Dashboard | **Coming Soon** |
-
-> The links above will be updated after deployment.
-
+| 🌐 AI Concierge | https://atrium-ai-resort-concierge.onrender.com |
+| 📊 Dashboard | https://atrium-ai-resort-concierge-ywafbm5ey3qxraexab8qwj.streamlit.app |
+| 📄 API Docs | https://atrium-ai-resort-concierge.onrender.com/docs |
 ---
 
 ## Demo Video
