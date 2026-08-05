@@ -1,0 +1,470 @@
+{
+  "Breakfast": [
+    {
+      "name": "Masala Dosa",
+      "description": "Crispy dosa with spiced potato filling",
+      "price": 120
+    },
+    {
+      "name": "Plain Idli",
+      "description": "Steamed rice cakes with chutney",
+      "price": 80
+    },
+    {
+      "name": "Medu Vada",
+      "description": "Fried lentil doughnuts",
+      "price": 90
+    },
+    {
+      "name": "Upma",
+      "description": "Semolina cooked with vegetables",
+      "price": 100
+    },
+    {
+      "name": "Poha",
+      "description": "Flattened rice with peanuts",
+      "price": 100
+    },
+    {
+      "name": "Aloo Paratha",
+      "description": "Stuffed paratha with curd",
+      "price": 130
+    },
+    {
+      "name": "Paneer Paratha",
+      "description": "Paneer stuffed paratha",
+      "price": 150
+    },
+    {
+      "name": "Puri Bhaji",
+      "description": "Fried bread with potato curry",
+      "price": 140
+    },
+    {
+      "name": "Omelette",
+      "description": "Indian-style omelette",
+      "price": 90
+    },
+    {
+      "name": "Boiled Eggs",
+      "description": "Two boiled eggs",
+      "price": 70
+    }
+  ],
+  "Veg Starters": [
+    {
+      "name": "Paneer Tikka",
+      "description": "Grilled paneer cubes",
+      "price": 220
+    },
+    {
+      "name": "Veg Manchurian",
+      "description": "Veg balls in spicy sauce",
+      "price": 180
+    },
+    {
+      "name": "Hara Bhara Kabab",
+      "description": "Spinach & peas kabab",
+      "price": 200
+    },
+    {
+      "name": "Crispy Corn",
+      "description": "Fried corn with spices",
+      "price": 160
+    },
+    {
+      "name": "Aloo Chaat",
+      "description": "Spicy potato snack",
+      "price": 150
+    },
+    {
+      "name": "Paneer Pakora",
+      "description": "Fried paneer fritters",
+      "price": 170
+    },
+    {
+      "name": "Veg Spring Roll",
+      "description": "Stuffed crispy rolls",
+      "price": 180
+    },
+    {
+      "name": "Mushroom Tikka",
+      "description": "Grilled mushrooms",
+      "price": 210
+    },
+    {
+      "name": "Corn Cheese Balls",
+      "description": "Cheese filled corn balls",
+      "price": 190
+    },
+    {
+      "name": "Stuffed Capsicum",
+      "description": "Veg stuffed capsicum",
+      "price": 200
+    }
+  ],
+  "Non-Veg Starters": [
+    {
+      "name": "Chicken Tikka",
+      "description": "Grilled marinated chicken",
+      "price": 260
+    },
+    {
+      "name": "Chicken 65",
+      "description": "Spicy fried chicken",
+      "price": 240
+    },
+    {
+      "name": "Fish Fry",
+      "description": "Shallow fried fish",
+      "price": 280
+    },
+    {
+      "name": "Mutton Seekh Kabab",
+      "description": "Minced mutton kabab",
+      "price": 320
+    },
+    {
+      "name": "Prawn Tempura",
+      "description": "Crispy fried prawns",
+      "price": 350
+    },
+    {
+      "name": "Chicken Pakora",
+      "description": "Gram flour fried chicken",
+      "price": 230
+    },
+    {
+      "name": "Tandoori Chicken",
+      "description": "Charcoal grilled chicken",
+      "price": 300
+    },
+    {
+      "name": "Fish Tikka",
+      "description": "Grilled fish cubes",
+      "price": 290
+    },
+    {
+      "name": "Chicken Lollipop",
+      "description": "Fried chicken wings",
+      "price": 250
+    },
+    {
+      "name": "Egg Bhurji",
+      "description": "Spiced scrambled eggs",
+      "price": 180
+    }
+  ],
+  "Veg Main Course": [
+    {
+      "name": "Paneer Butter Masala",
+      "description": "Creamy tomato gravy",
+      "price": 260
+    },
+    {
+      "name": "Shahi Paneer",
+      "description": "Cashew based gravy",
+      "price": 270
+    },
+    {
+      "name": "Dal Tadka",
+      "description": "Yellow lentils tempered",
+      "price": 180
+    },
+    {
+      "name": "Dal Makhani",
+      "description": "Creamy black lentils",
+      "price": 220
+    },
+    {
+      "name": "Mix Veg",
+      "description": "Seasonal vegetable curry",
+      "price": 200
+    },
+    {
+      "name": "Chole Masala",
+      "description": "Chickpea curry",
+      "price": 210
+    },
+    {
+      "name": "Rajma Masala",
+      "description": "Red kidney bean curry",
+      "price": 210
+    },
+    {
+      "name": "Kadai Paneer",
+      "description": "Spicy paneer curry",
+      "price": 250
+    },
+    {
+      "name": "Palak Paneer",
+      "description": "Spinach paneer curry",
+      "price": 240
+    },
+    {
+      "name": "Veg Korma",
+      "description": "Mild coconut gravy",
+      "price": 230
+    }
+  ],
+  "Non-Veg Main Course": [
+    {
+      "name": "Butter Chicken",
+      "description": "Creamy tomato chicken curry",
+      "price": 320
+    },
+    {
+      "name": "Chicken Curry",
+      "description": "Traditional Indian curry",
+      "price": 280
+    },
+    {
+      "name": "Chicken Korma",
+      "description": "Cashew based gravy",
+      "price": 300
+    },
+    {
+      "name": "Mutton Rogan Josh",
+      "description": "Kashmiri mutton curry",
+      "price": 380
+    },
+    {
+      "name": "Fish Curry",
+      "description": "Spicy fish gravy",
+      "price": 330
+    },
+    {
+      "name": "Prawn Masala",
+      "description": "Spicy prawn curry",
+      "price": 360
+    },
+    {
+      "name": "Egg Curry",
+      "description": "Boiled eggs in gravy",
+      "price": 220
+    },
+    {
+      "name": "Chicken Chettinad",
+      "description": "South Indian spicy curry",
+      "price": 310
+    },
+    {
+      "name": "Mutton Curry",
+      "description": "Slow cooked mutton",
+      "price": 360
+    },
+    {
+      "name": "Fish Moilee",
+      "description": "Coconut fish curry",
+      "price": 340
+    }
+  ],
+  "Desserts": [
+    {
+      "name": "Gulab Jamun",
+      "description": "Milk dumplings in syrup",
+      "price": 90
+    },
+    {
+      "name": "Rasgulla",
+      "description": "Soft cottage cheese balls",
+      "price": 90
+    },
+    {
+      "name": "Ice Cream",
+      "description": "Vanilla/Chocolate/Strawberry",
+      "price": 100
+    },
+    {
+      "name": "Brownie",
+      "description": "Chocolate brownie",
+      "price": 140
+    },
+    {
+      "name": "Fruit Salad",
+      "description": "Fresh seasonal fruits",
+      "price": 120
+    },
+    {
+      "name": "Kheer",
+      "description": "Rice pudding",
+      "price": 110
+    },
+    {
+      "name": "Gajar Halwa",
+      "description": "Carrot dessert",
+      "price": 130
+    },
+    {
+      "name": "Rabri",
+      "description": "Sweet thickened milk",
+      "price": 140
+    },
+    {
+      "name": "Kulfi",
+      "description": "Traditional kulfi",
+      "price": 120
+    },
+    {
+      "name": "Jalebi",
+      "description": "Crispy syrup dessert",
+      "price": 90
+    }
+  ],
+  "Drinks": [
+    {
+      "name": "Tea",
+      "description": "Indian tea",
+      "price": 40
+    },
+    {
+      "name": "Coffee",
+      "description": "Hot coffee",
+      "price": 50
+    },
+    {
+      "name": "Masala Chai",
+      "description": "Spiced tea",
+      "price": 50
+    },
+    {
+      "name": "Cold Coffee",
+      "description": "Iced coffee",
+      "price": 90
+    },
+    {
+      "name": "Fresh Lime Soda",
+      "description": "Sweet or salt",
+      "price": 70
+    },
+    {
+      "name": "Soft Drinks",
+      "description": "Coke/Pepsi/Sprite",
+      "price": 60
+    },
+    {
+      "name": "Buttermilk",
+      "description": "Spiced yogurt drink",
+      "price": 60
+    },
+    {
+      "name": "Lassi",
+      "description": "Sweet or salted",
+      "price": 80
+    },
+    {
+      "name": "Fresh Juice",
+      "description": "Seasonal fruit juice",
+      "price": 100
+    },
+    {
+      "name": "Mineral Water",
+      "description": "1L bottle",
+      "price": 40
+    }
+  ],
+  "Breads": [
+    {
+      "name": "Tandoori Roti",
+      "description": "Whole wheat roti",
+      "price": 25
+    },
+    {
+      "name": "Butter Roti",
+      "description": "Butter topped roti",
+      "price": 30
+    },
+    {
+      "name": "Plain Naan",
+      "description": "Refined flour naan",
+      "price": 40
+    },
+    {
+      "name": "Butter Naan",
+      "description": "Butter naan",
+      "price": 50
+    },
+    {
+      "name": "Garlic Naan",
+      "description": "Garlic flavored naan",
+      "price": 60
+    },
+    {
+      "name": "Laccha Paratha",
+      "description": "Layered paratha",
+      "price": 50
+    },
+    {
+      "name": "Missi Roti",
+      "description": "Spiced gram flour roti",
+      "price": 45
+    },
+    {
+      "name": "Roomali Roti",
+      "description": "Thin soft roti",
+      "price": 40
+    },
+    {
+      "name": "Stuffed Naan",
+      "description": "Paneer stuffed naan",
+      "price": 70
+    },
+    {
+      "name": "Kulcha",
+      "description": "Leavened bread",
+      "price": 50
+    }
+  ],
+  "Miscellaneous": [
+    {
+      "name": "Extra Rice",
+      "description": "Steamed rice",
+      "price": 80
+    },
+    {
+      "name": "Papad",
+      "description": "Roasted or fried",
+      "price": 30
+    },
+    {
+      "name": "Raita",
+      "description": "Curd with vegetables",
+      "price": 70
+    },
+    {
+      "name": "Pickle",
+      "description": "Indian mixed pickle",
+      "price": 40
+    },
+    {
+      "name": "Salad",
+      "description": "Fresh green salad",
+      "price": 80
+    },
+    {
+      "name": "Onion Salad",
+      "description": "Sliced onions with lemon",
+      "price": 60
+    },
+    {
+      "name": "Boondi Raita",
+      "description": "Curd with boondi",
+      "price": 80
+    },
+    {
+      "name": "Lemon Wedges",
+      "description": "Fresh lemon slices",
+      "price": 30
+    },
+    {
+      "name": "Extra Gravy",
+      "description": "Additional curry gravy",
+      "price": 60
+    },
+    {
+      "name": "Butter",
+      "description": "Extra butter",
+      "price": 40
+    }
+  ]
+}

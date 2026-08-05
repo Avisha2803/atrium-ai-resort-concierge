@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Atrium Resort</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="page-backdrop">
+    <div class="page-hero">
+      <h1>🏝️ Atrium Resort</h1>
+      <p>Your stay, simplified. Tap the concierge in the corner for anything you need.</p>
+    </div>
+  </div>
+
+  <!-- Floating launcher -->
+  <button id="launcher" class="launcher" aria-label="Open concierge chat">💬</button>
+
+  <!-- Widget -->
+  <div id="widget" class="widget hidden">
+    <div class="widget-header">
+      <div class="widget-header-left">
+        <div class="widget-avatar">🏨</div>
+        <div>
+          <div class="widget-title">Resort Concierge</div>
+          <div class="widget-subtitle">Your personal AI assistant</div>
+        </div>
+      </div>
+      <button id="closeWidget" class="icon-btn" aria-label="Close">✕</button>
+    </div>
+
+    <!-- Room gate -->
+    <div id="roomGate" class="room-gate">
+      <div class="room-gate-card">
+        <p>Which room are you staying in?</p>
+        <input id="roomInput" placeholder="e.g. 201" />
+        <button id="roomContinue" class="btn-continue">Continue</button>
+      </div>
+    </div>
+
+    <!-- Chat -->
+    <div id="chatBody" class="widget-body hidden">
+      <div id="messages" class="messages"></div>
+      <div id="quickActions" class="quick-actions"></div>
+      <div class="widget-input-row">
+        <span class="emoji-btn">😊</span>
+        <input id="chatInput" placeholder="Type your request..." />
+        <button id="sendBtn" class="send-btn" aria-label="Send">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/widget.js"></script>
+</body>
+</html>

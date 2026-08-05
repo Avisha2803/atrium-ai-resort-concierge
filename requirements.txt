@@ -1,0 +1,24 @@
+# ---------------- FastAPI ----------------
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# ---------------- Database ----------------
+sqlalchemy==2.0.36
+aiosqlite==0.21.0
+
+# ---------------- LangChain ----------------
+langchain==0.3.25
+langchain-core==0.3.59
+langgraph==0.2.76
+langgraph-checkpoint-sqlite==2.0.6
+langchain-google-genai==2.1.4
+
+# ---------------- Dashboard ----------------
+streamlit==1.38.0
+streamlit-autorefresh==1.0.1
+plotly==5.24.1
+pandas==2.2.3
+
+# ---------------- Utilities ----------------
+python-dotenv==1.0.1
+pydantic==2.10.6
