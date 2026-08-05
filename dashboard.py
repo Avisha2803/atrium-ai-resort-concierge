@@ -40,40 +40,69 @@ STATUS_COLORS = {
 # --------------------------------------------------------------------------
 def load_orders():
     response = requests.get(f"{API_URL}/api/dashboard/orders")
-    df = pd.DataFrame(response.json())
+    data = response.json()
 
-    if df.empty:
-        df = pd.DataFrame(
-            columns=[
-                "Order ID",
-                "Room",
-                "Items",
-                "Amount (₹)",
-                "Status",
-                "Created At",
-            ]
+    rows = []
+
+    for order in data:
+        items = ", ".join(
+            f"{i['quantity']}x {i['name']}"
+            for i in order["items"]
         )
 
-    return df
+        rows.append(
+            {
+                "Order ID": order["id"],
+                "Room": order["room_number"],
+                "Items": items,
+                "Amount (₹)": order["total_amount"],
+                "Status": order["status"],
+                "Created At": order["created_at"],
+            }
+        )
+
+    return pd.DataFrame(
+        rows,
+        columns=[
+            "Order ID",
+            "Room",
+            "Items",
+            "Amount (₹)",
+            "Status",
+            "Created At",
+        ],
+    )
 
 
 def load_requests():
     response = requests.get(f"{API_URL}/api/dashboard/requests")
-    df = pd.DataFrame(response.json())
+    data = response.json()
 
-    if df.empty:
-        df = pd.DataFrame(
-            columns=[
-                "Request ID",
-                "Room",
-                "Type",
-                "Details",
-                "Status",
-                "Created At",
-            ]
+    rows = []
+
+    for req in data:
+        rows.append(
+            {
+                "Request ID": req["id"],
+                "Room": req["room_number"],
+                "Type": req["request_type"],
+                "Details": req["details"],
+                "Status": req["status"],
+                "Created At": req["created_at"],
+            }
         )
 
-    return df
+    return pd.DataFrame(
+        rows,
+        columns=[
+            "Request ID",
+            "Room",
+            "Type",
+            "Details",
+            "Status",
+            "Created At",
+        ],
+    )
 
 def update_order_status(order_id, status):
     requests.put(
