@@ -40,13 +40,40 @@ STATUS_COLORS = {
 # --------------------------------------------------------------------------
 def load_orders():
     response = requests.get(f"{API_URL}/api/dashboard/orders")
-    return pd.DataFrame(response.json())
+    df = pd.DataFrame(response.json())
+
+    if df.empty:
+        df = pd.DataFrame(
+            columns=[
+                "Order ID",
+                "Room",
+                "Items",
+                "Amount (₹)",
+                "Status",
+                "Created At",
+            ]
+        )
+
+    return df
 
 
 def load_requests():
     response = requests.get(f"{API_URL}/api/dashboard/requests")
-    return pd.DataFrame(response.json())
+    df = pd.DataFrame(response.json())
 
+    if df.empty:
+        df = pd.DataFrame(
+            columns=[
+                "Request ID",
+                "Room",
+                "Type",
+                "Details",
+                "Status",
+                "Created At",
+            ]
+        )
+
+    return df
 
 def update_order_status(order_id, status):
     requests.put(
